@@ -39,8 +39,8 @@
 
 ## Specifications
 
-- Spec 1: Professional Tooling Setup: Done
-- Spec 2: Semantic HTML Structure : To do
+- Spec 1: Professional Tooling Setup: Complete
+- Spec 2: Semantic HTML Structure : Compplete
 - Spec 3: CSS Typography & Layout : To do
 - Spec 4: Documentation & Deployment : To do
 
