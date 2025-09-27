@@ -22,6 +22,24 @@ body {
   padding: 20px;
 }
 
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #3E5C76;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
 /* Headings */
 h1, h2, h3 {
   font-family: 'Merriweather', serif;
