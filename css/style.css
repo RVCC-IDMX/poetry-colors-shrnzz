@@ -64,7 +64,11 @@ h3 {
 
 /* Hide screen reader headings */
 .visually-hidden {
-  display: none;
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /* Navigation */
@@ -82,9 +86,10 @@ nav a {
   font-weight: 600;
   padding: 10px 15px;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover, nav a:focus {
   background-color: #88B799;
   color: white;
 }
@@ -157,11 +162,22 @@ input, textarea {
   border: 2px solid #88B799;
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
+  transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus {
-  outline: none;
+  outline: 2px solid #3E5C76;
+  outline-offset: 2px;
   border-color: #3E5C76;
+}
+
+/* Form validation styles */
+input:invalid {
+  border-color: #e74c3c;
+}
+
+input:valid {
+  border-color: #27ae60;
 }
 
 button {
@@ -172,10 +188,16 @@ button {
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #88B799;
+}
+
+button:focus {
+  outline: 2px solid #3E5C76;
+  outline-offset: 2px;
 }
 
 /* Footer */
@@ -206,5 +228,27 @@ footer {
   
   .stanza p {
     font-size: 18px;
+  }
+  
+  /* Better mobile form styling */
+  form {
+    padding: 20px;
+  }
+  
+  /* Stack audio section content better on mobile */
+  .audio-section {
+    padding: 20px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  nav a {
+    padding: 8px 12px;
+    font-size: 16px;
   }
 }
