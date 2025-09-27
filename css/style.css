@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+/* Add smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Body Styling */
 body {
   font-family: 'Open Sans', sans-serif;
@@ -226,6 +231,15 @@ footer {
     gap: 15px;
   }
   
+  /* Improve nav button touch targets */
+  nav a {
+    padding: 15px 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .stanza p {
     font-size: 18px;
   }
@@ -233,6 +247,12 @@ footer {
   /* Better mobile form styling */
   form {
     padding: 20px;
+  }
+  
+  /* Improve button touch targets */
+  button {
+    padding: 15px 30px;
+    min-height: 44px;
   }
   
   /* Stack audio section content better on mobile */
