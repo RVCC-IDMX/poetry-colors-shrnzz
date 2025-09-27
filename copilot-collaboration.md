@@ -16,8 +16,8 @@
 ### Creating HTML structure
 
 **Mode:** Agent
-**Why this mode:** Ready to build after planning
-**Helpful:** Generated semantic HTML matching my poem
+**Why this mode:** To help build semantic html based off my project goals
+**Helpful:** Generated semantic HTML matching my poem, also was able to make edits to the code to make it even better. WCAG AA standards met.
 
 ### Fixing CSS colors
 

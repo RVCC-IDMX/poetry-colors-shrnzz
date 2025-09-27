@@ -5,7 +5,9 @@
   "main": "index.html",
   "scripts": {
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "fix-html": "sed -i '' 's/ \\/>/>/g' index.html",
+    "validate": "npm run format && npm run fix-html"
   },
   "keywords": [
     "poetry",
