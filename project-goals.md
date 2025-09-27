@@ -38,7 +38,8 @@
 - For this project, I want to design a simple webpage that reflects the theme of my chosen poem, "The lake isle of innisfree". The poem focuses on simplicity, peace, and harmony with nature, so my goal is to create something that mirrors those feelings through its design. I will use a clean layout, a calm color palette, and maybe incorporate some natural imagery to make the webpage feel like a retreat into nature as the poem describes. Through this project, I'll be able to connect the literatury theme of my poem to web design.
 
 ## Specifications
-- Spec 1: Professional Tooling Setup: Done 
+
+- Spec 1: Professional Tooling Setup: Done
 - Spec 2: Semantic HTML Structure : To do
 - Spec 3: CSS Typography & Layout : To do
 - Spec 4: Documentation & Deployment : To do
