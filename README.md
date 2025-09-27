@@ -88,11 +88,9 @@ Reference your files using `#file:` syntax (e.g., `#file:project-goals.md`) to g
 
 ### Your Live Site
 
-**Netlify URL:** [Add your URL here after deployment]
+**Netlify URL:** https://thelakeisleofinnisfree.netlify.app/
 
 ## Technologies Used
-
-[Update this section as you work]
 
 - HTML5
 - CSS3
@@ -102,13 +100,14 @@ Reference your files using `#file:` syntax (e.g., `#file:project-goals.md`) to g
 
 ## Design Decisions
 
-[Update this section with your choices]
-
 Explain at least 2 design decisions you made:
 
 1. Why did you choose your fonts?
+- I chose these fonts because they were simple and followed my design aesthetic. I was going for a minimalistic approach which reflected the theme of my poem (a simple lifestyle). The font is also pleasing to read and not boring, this catches the readers eyes and makes reading a poem less boring. 
 2. Why did you choose your color scheme?
+- The color scheme is very calm and minimalistic. There aren't any harsh colors that would distract the user and the color palette suits the design aesthetic I was going for. 
 3. How did you approach the layout?
+- I wanted the layout to be simple and accessible to everyone. I had an idea of adding an audio section as well, although there aren't any audio files of the poem present in the project yet but it is something I would consider adding to enhance the experience for users. 
 4. Other design decisions necessary for poem choice?
 
 ## Completion Checklist
