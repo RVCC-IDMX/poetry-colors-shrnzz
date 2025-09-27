@@ -7,7 +7,12 @@
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
-  "keywords": ["poetry", "web", "html", "css"],
+  "keywords": [
+    "poetry",
+    "web",
+    "html",
+    "css"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
