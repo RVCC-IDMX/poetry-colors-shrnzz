@@ -41,6 +41,22 @@
         <header>
           <h1 id="poem-title">The Lake Isle of Innisfree</h1>
           <p class="poet-name">by <cite>William Butler Yeats</cite></p>
+
+          <!-- Hero landscape image, loading="eager" -->
+          <figure class="hero-image">
+            <img 
+              src="https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_800/pixel-art-river-landscape.jpg"
+              srcset="
+                https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_480/pixel-art-river-landscape.jpg 480w,
+                https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_800/pixel-art-river-landscape.jpg 800w,
+                https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_1200/pixel-art-river-landscape.jpg 1200w,
+                https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_1600/pixel-art-river-landscape.jpg 1600w
+              "
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              alt="Pixelated landscape evoking Yeats' vision of peaceful solitude and natural harmony"
+              loading="eager"
+            >
+          </figure>
         </header>
 
         <article class="poem-content">
@@ -146,6 +162,21 @@
           <p>
             Have thoughts about this interpretation? I'd love to hear from you.
           </p>
+
+          <!-- Cabin pixel art image, decorative for contact section -->
+          <figure class="contact-image">
+            <img 
+              src="https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_400/pixel-art-river-cabin.jpg"
+              srcset="
+                https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_300/pixel-art-river-cabin.jpg 300w,
+                https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_400/pixel-art-river-cabin.jpg 400w,
+                https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_600/pixel-art-river-cabin.jpg 600w
+              "
+              sizes="(max-width: 768px) 250px, 400px"
+              alt="Charming pixel art cabin reflecting the simple dwelling Yeats dreamed of building"
+              loading="lazy"
+            >
+          </figure>
 
           <form method="post" aria-labelledby="contact-heading">
             <div class="form-group">
