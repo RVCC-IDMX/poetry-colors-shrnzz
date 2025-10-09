@@ -21,12 +21,12 @@
 
 ### Fixing CSS colors
 
-**Mode:** Edit/Agent 
-**Why this mode:** Made edits and added a lot of improvements to my css file. 
-**Helpful:** Updated css for accessibility and added smooth scrolling for better user experience. 
+**Mode:** Edit/Agent
+**Why this mode:** Made edits and added a lot of improvements to my css file.
+**Helpful:** Updated css for accessibility and added smooth scrolling for better user experience.
 
 ## What I Learned
 
 - **Ask vs Agent:** Asking mode helped me understand the why and how certain elements had do be implemented in my project. When i eas able to understand the reasoning, it became easier to create prompts when using Agent mode to build my project.
 - **Best discovery:** learning how to fix problems occuring in my project due to .prettierrc file. My html code would not pass on the w3c validator. Turns out the prettier file would auto format and add trailing slashes. Fortunately, it was an easy fix, just had to add a few lines to my package.json file to remove those trailing slashes. Ran the required npm run commands in the terminal and it automatically cleaned up my html file!
-- **Next time:** Next time I would spend more time with my intial set up and testing out a basic structure before moving onto to working fully on my project. This will help ensure that I don't run into issues when I'm further into the project; although most things are an easy fix they can still be quite frustrating and can hinder your workflow. 
+- **Next time:** Next time I would spend more time with my intial set up and testing out a basic structure before moving onto to working fully on my project. This will help ensure that I don't run into issues when I'm further into the project; although most things are an easy fix they can still be quite frustrating and can hinder your workflow.

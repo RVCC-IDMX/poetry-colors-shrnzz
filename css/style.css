@@ -21,7 +21,7 @@ body {
   font-size: 18px;
   line-height: 1.6;
   color: #333333;
-  background-color: #F5F1EA;
+  background-color: #f5f1ea;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -32,7 +32,7 @@ body {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: #3E5C76;
+  background: #3e5c76;
   color: white;
   padding: 8px;
   text-decoration: none;
@@ -46,9 +46,11 @@ body {
 }
 
 /* Headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Merriweather', serif;
-  color: #3E5C76;
+  color: #3e5c76;
   margin-bottom: 20px;
 }
 
@@ -86,7 +88,7 @@ nav ul {
 }
 
 nav a {
-  color: #3E5C76;
+  color: #3e5c76;
   text-decoration: none;
   font-weight: 600;
   padding: 10px 15px;
@@ -94,8 +96,9 @@ nav a {
   transition: all 0.3s ease;
 }
 
-nav a:hover, nav a:focus {
-  background-color: #88B799;
+nav a:hover,
+nav a:focus {
+  background-color: #88b799;
   color: white;
 }
 
@@ -103,7 +106,7 @@ nav a:hover, nav a:focus {
 .poet-name {
   text-align: center;
   font-style: italic;
-  color: #A6785A;
+  color: #a6785a;
   margin-bottom: 40px;
 }
 
@@ -139,7 +142,7 @@ nav a:hover, nav a:focus {
 
 /* Audio Section */
 .audio-section {
-  background-color: #88B79920;
+  background-color: #88b79920;
   padding: 30px;
   border-radius: 10px;
   text-align: center;
@@ -153,10 +156,12 @@ audio {
 }
 
 /* About Sections */
-.context, .interpretation, .author-background {
+.context,
+.interpretation,
+.author-background {
   margin-bottom: 30px;
   padding-left: 20px;
-  border-left: 3px solid #88B799;
+  border-left: 3px solid #88b799;
 }
 
 /* Contact Section Layout */
@@ -204,10 +209,10 @@ audio {
 
 /* Contact Form */
 form {
-  background-color: #F5F1EA;
+  background-color: #f5f1ea;
   padding: 30px;
   border-radius: 10px;
-  border: 1px solid #88B799;
+  border: 1px solid #88b799;
   flex: 2 1 400px;
   min-width: 300px;
   order: 1; /* Form first (left side) */
@@ -228,22 +233,24 @@ label {
   display: block;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #3E5C76;
+  color: #3e5c76;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 12px;
-  border: 2px solid #88B799;
+  border: 2px solid #88b799;
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
   transition: border-color 0.3s ease;
 }
 
-input:focus, textarea:focus {
-  outline: 2px solid #3E5C76;
+input:focus,
+textarea:focus {
+  outline: 2px solid #3e5c76;
   outline-offset: 2px;
-  border-color: #3E5C76;
+  border-color: #3e5c76;
 }
 
 /* Form validation styles */
@@ -256,7 +263,7 @@ input:valid {
 }
 
 button {
-  background-color: #3E5C76;
+  background-color: #3e5c76;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -267,11 +274,11 @@ button {
 }
 
 button:hover {
-  background-color: #88B799;
+  background-color: #88b799;
 }
 
 button:focus {
-  outline: 2px solid #3E5C76;
+  outline: 2px solid #3e5c76;
   outline-offset: 2px;
 }
 
@@ -280,7 +287,7 @@ footer {
   text-align: center;
   margin-top: 50px;
   padding-top: 30px;
-  border-top: 1px solid #88B799;
+  border-top: 1px solid #88b799;
   color: #666;
   font-style: italic;
 }
@@ -290,37 +297,37 @@ footer {
   body {
     padding: 15px;
   }
-  
+
   h1 {
     font-size: 28px;
   }
-  
+
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  
+
   /* Image responsive adjustments */
   .hero-image {
     margin: 1rem 0;
   }
-  
+
   .contact-content {
     flex-direction: column;
   }
-  
+
   .contact-image {
     order: -1 !important; /* Shows image above form on mobile, override desktop order */
     max-width: 100%;
     margin-bottom: 1rem;
   }
-  
+
   form {
     margin: 0;
     order: 0 !important; /* Reset form order on mobile */
   }
-  
+
   /* Improve nav button touch targets */
   nav a {
     padding: 15px 20px;
@@ -329,22 +336,22 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  
+
   .stanza p {
     font-size: 18px;
   }
-  
+
   /* Better mobile form styling */
   form {
     padding: 20px;
   }
-  
+
   /* Improve button touch targets */
   button {
     padding: 15px 30px;
     min-height: 44px;
   }
-  
+
   /* Stack audio section content better on mobile */
   .audio-section {
     padding: 20px;
@@ -356,12 +363,12 @@ footer {
   h1 {
     font-size: 24px;
   }
-  
+
   nav a {
     padding: 8px 12px;
     font-size: 16px;
   }
-  
+
   /* Smaller border radius for very small screens */
   .hero-image img,
   .contact-image img {
@@ -375,11 +382,11 @@ footer {
     flex-direction: row;
     align-items: flex-start;
   }
-  
+
   .contact-image {
     order: 2 !important; /* Image on right side */
   }
-  
+
   form {
     order: 1 !important; /* Form on left side */
   }
@@ -392,4 +399,3 @@ footer {
     padding: 40px;
   }
 }
-
