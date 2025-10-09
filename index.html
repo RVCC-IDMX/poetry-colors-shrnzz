@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://res.cloudinary.com">
+    <link rel="dns-prefetch" href="https://res.cloudinary.com">
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./css/style.css"></noscript>
+    
     <meta
       name="description"
       content="The Lake Isle of Innisfree by W.B. Yeats - A beautiful interpretation of this classic poem about nature, peace, and simplicity"
@@ -22,7 +31,6 @@
    >
     <meta property="og:type" content="website">
     <title>The Lake Isle of Innisfree | Poetry Interpretation</title>
-    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -42,8 +50,7 @@
           <h1 id="poem-title">The Lake Isle of Innisfree</h1>
           <p class="poet-name">by <cite>William Butler Yeats</cite></p>
 
-          <!-- Hero landscape image, loading="eager" -->
-          <!-- img from: https://www.freepik.com/ -->
+          <!--- img source: https://www.freepik.com/ --->
           <figure class="hero-image">
             <img
               src="https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_800/pixel-art-river-landscape.jpg"
@@ -56,6 +63,9 @@
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               alt="Pixelated landscape evoking Yeats' vision of peaceful solitude and natural harmony"
               loading="eager"
+              width="800"
+              height="600"
+              fetchpriority="high"
            >
           </figure>
         </header>
@@ -92,6 +102,7 @@
           <h2 id="audio-heading">Listen to the Poem</h2>
           <audio
             controls
+            preload="none"
             aria-label="Audio reading of The Lake Isle of Innisfree"
           >
             <source src="audio/innisfree-reading.mp3" type="audio/mpeg">
@@ -164,8 +175,7 @@
             Have thoughts about this interpretation? I'd love to hear from you.
           </p>
 
-          <!-- Cabin pixel art image, decorative for contact section -->
-          <!-- img from: https://www.freepik.com/ -->
+          <!--- img source: https://www.freepik.com/ --->
           <figure class="contact-image">
             <img
               src="https://res.cloudinary.com/saharnz-portfolio/image/upload/f_auto,q_auto,w_400/pixel-art-river-cabin.jpg"
@@ -177,6 +187,8 @@
               sizes="(max-width: 768px) 360px, 500px"
               alt="Charming pixel art cabin reflecting the simple dwelling Yeats dreamed of building"
               loading="lazy"
+              width="400"
+              height="300"
            >
             <figcaption>
               A peaceful riverside cabin, embodying the simple life Yeats
@@ -194,7 +206,6 @@
                 required
                 aria-describedby="name-help"
                 maxlength="100"
-                autocomplete="name"
              >
               <small id="name-help">Please enter your full name</small>
             </div>
@@ -208,7 +219,6 @@
                 required
                 aria-describedby="email-help"
                 maxlength="100"
-                autocomplete="email"
              >
               <small id="email-help"
                 >We'll never share your email address</small
