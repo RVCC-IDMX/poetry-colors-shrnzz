@@ -1,0 +1,23 @@
+{
+  "name": "poetry-interpretation-shrnzz",
+  "version": "1.0.0",
+  "description": "A beautiful webpage displaying poetry with modern web development practices",
+  "main": "index.html",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "fix-html": "sed -i '' 's/ \\/>/>/g' index.html",
+    "validate": "npm run format && npm run fix-html"
+  },
+  "keywords": [
+    "poetry",
+    "web",
+    "html",
+    "css"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
