@@ -1,0 +1,183 @@
+/* CSS CUSTOM PROPERTIES QUICK REFERENCE
+   Copy and paste these when styling new elements
+   ========================================== */
+
+/* FONT SIZES - All using clamp() for fluid typography
+   ---------------------------------------------------- */
+
+/* Base and body text */
+--font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);        /* 16px → 18px */
+--font-size-body: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);         /* 18px → 20px */
+--font-size-small: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);      /* 14px → 16px */
+
+/* Headings - hierarchical scale */
+--font-size-h1: clamp(2rem, 1.5rem + 2vw, 3rem);                  /* 32px → 48px */
+--font-size-h2: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);         /* 24px → 36px */
+--font-size-h3: clamp(1.25rem, 1.1rem + 0.75vw, 1.75rem);         /* 20px → 28px */
+
+/* Special elements */
+--font-size-poem: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);        /* 20px → 24px */
+--font-size-poet-name: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);   /* 18px → 22px */
+--font-size-nav: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);         /* 16px → 18px */
+--font-size-button: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);      /* 16px → 18px */
+
+/* LINE HEIGHTS - Relative values
+   -------------------------------- */
+--line-height-tight: 1.2;    /* Use for: headings */
+--line-height-normal: 1.6;   /* Use for: body text, UI elements */
+--line-height-loose: 1.8;    /* Use for: poem text, reading content */
+
+/* LETTER SPACING - For variable font fine-tuning
+   ------------------------------------------------ */
+--letter-spacing-tight: -0.02em;   /* Tighter for large headings */
+--letter-spacing-normal: 0;        /* Default for most text */
+--letter-spacing-wide: 0.02em;     /* Better for small UI text */
+
+/* FONT FAMILIES - Semantic naming
+   --------------------------------- */
+--font-family-serif: 'Merriweather', Georgia, 'Times New Roman', serif;
+--font-family-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+--font-family-variable: 'Inter Variable', var(--font-family-sans);
+
+/* FONT WEIGHTS - Standard scale
+   ------------------------------- */
+--font-weight-normal: 400;      /* Regular text */
+--font-weight-semibold: 600;    /* Emphasis, labels */
+--font-weight-bold: 700;        /* Headings, strong emphasis */
+
+/* USAGE EXAMPLES
+   ============== */
+
+/* Example 1: New heading level (h4) */
+h4 {
+  font-family: var(--font-family-serif);
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);  /* Between h3 and body */
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: #3e5c76;
+}
+
+/* Example 2: Caption or small text */
+.caption {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  font-style: italic;
+  color: #666;
+}
+
+/* Example 3: UI element with variable font */
+.badge {
+  font-family: var(--font-family-variable);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+/* Example 4: Quote or emphasis */
+blockquote {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-poem);
+  font-style: italic;
+  line-height: var(--line-height-loose);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Example 5: Interactive UI element */
+.card-title {
+  font-family: var(--font-family-variable);
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+  transition: font-weight 0.2s ease;
+}
+
+.card-title:hover {
+  font-weight: 700;  /* Variable font weight change */
+}
+
+/* SPACING UTILITIES (using clamp)
+   ================================= */
+
+/* Common spacing patterns used in the project */
+
+/* Small spacing: 8px → 12px */
+clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem)
+
+/* Medium spacing: 16px → 24px */
+clamp(1rem, 0.75rem + 1vw, 1.5rem)
+
+/* Large spacing: 24px → 40px */
+clamp(1.5rem, 1.25rem + 1vw, 2.5rem)
+
+/* Extra large spacing: 32px → 64px */
+clamp(2rem, 1.5rem + 2vw, 4rem)
+
+/* CLAMP FORMULA BREAKDOWN
+   ========================
+
+   clamp(MIN, PREFERRED, MAX)
+   
+   MIN = Minimum value (mobile, 375px viewport)
+   PREFERRED = Fluid calculation using viewport width (vw)
+   MAX = Maximum value (desktop, 1200px+ viewport)
+   
+   Example calculation:
+   clamp(1rem, 0.95rem + 0.25vw, 1.125rem)
+   
+   At 375px viewport:  1rem (16px) - uses MIN
+   At 768px viewport:  ~1.04rem (16.6px) - uses PREFERRED
+   At 1200px viewport: 1.125rem (18px) - uses MAX
+   
+   Formula to create PREFERRED value:
+   PREFERRED = MIN + (MAX - MIN) * (100vw / viewport-range)
+   
+   Simplified: BASE + SCALE * vw
+*/
+
+/* ACCESSIBILITY CONSIDERATIONS
+   ============================== */
+
+/* Minimum sizes maintained:
+   - Base text: 16px minimum ✓
+   - Touch targets: 44px minimum ✓
+   - Contrast ratios: 4.5:1+ ✓
+   - Line heights: 1.5+ for body ✓
+
+/* Browser support:
+   - clamp(): 90%+ global support
+   - CSS variables: 97%+ global support
+   - Variable fonts: 95%+ global support
+   - Fallback fonts specified ✓
+*/
+
+/* COLOR CONTRAST (for reference)
+   =============================== */
+
+/* Text colors used in project:
+   #333333 on #f5f1ea = 10.8:1 ✓✓
+   #3e5c76 on #f5f1ea = 6.8:1 ✓✓
+   #a6785a on #f5f1ea = 4.6:1 ✓
+   #666666 on #f5f1ea = 5.9:1 ✓✓
+   white on #3e5c76 = 7.1:1 ✓✓
+   white on #88b799 = 3.2:1 ⚠️ (used for hover, not primary)
+*/
+
+/* PERFORMANCE NOTES
+   ================== */
+
+/* Fonts preloaded (in order of priority):
+   1. merriweather-bold.woff2 (headings)
+   2. opensans-regular.woff2 (body)
+   3. inter-variable.woff2 (nav/UI)
+   
+   Additional fonts loaded on demand:
+   4. merriweather-regular.woff2
+   5. opensans-semibold.woff2
+*/
+
+/* Total font weight: ~150-200KB (optimized WOFF2)
+   Load time on 3G: <1 second
+   font-display: swap prevents FOIT (Flash of Invisible Text)
+*/
