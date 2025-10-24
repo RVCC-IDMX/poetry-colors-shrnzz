@@ -341,7 +341,7 @@ nav a:focus {
    AUDIO SECTION
    ============================================ */
 .audio-section {
-  background-color: #88b79920;
+  background-color: hsl(142 25% 63% / 0.12);
   padding: clamp(1.5rem, 1.25rem + 1vw, 2.5rem);
   border-radius: 10px;
   text-align: center;
@@ -420,10 +420,10 @@ audio {
 
 /* Contact Form */
 form {
-  background-color: #f5f1ea;
+  background-color: var(--surface);
   padding: clamp(1.5rem, 1.25rem + 1vw, 2.5rem);
   border-radius: 10px;
-  border: 1px solid #88b799;
+  border: 1px solid var(--border);
   flex: 2 1 400px;
   min-width: 300px;
   order: 1; /* Form first (left side) */
