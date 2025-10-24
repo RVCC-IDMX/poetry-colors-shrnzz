@@ -270,7 +270,7 @@ nav ul {
 }
 
 nav a {
-  color: #3e5c76;
+  color: var(--primary);
   text-decoration: none;
   font-size: var(--font-size-nav);
   font-weight: 500;
@@ -282,8 +282,8 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  background-color: #88b799;
-  color: white;
+  background-color: var(--accent);
+  color: var(--white);
   font-weight: 600;
 }
 
@@ -296,7 +296,7 @@ nav a:focus {
   font-size: var(--font-size-poet-name);
   font-style: italic;
   font-weight: var(--font-weight-normal);
-  color: #a6785a;
+  color: var(--accent-strong);
   text-align: center;
   line-height: var(--line-height-normal);
   margin-bottom: clamp(2rem, 1.5rem + 2vw, 3rem);
