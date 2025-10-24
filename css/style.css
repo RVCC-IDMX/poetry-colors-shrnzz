@@ -208,7 +208,7 @@ figcaption {
   font-size: var(--font-size-small);
   font-style: italic;
   line-height: var(--line-height-normal);
-  color: #666;
+  color: var(--text-muted);
   text-align: center;
 }
 
@@ -453,7 +453,7 @@ input,
 textarea {
   width: 100%;
   padding: clamp(0.625rem, 0.5rem + 0.5vw, 0.875rem);
-  border: 2px solid #88b799;
+  border: 2px solid var(--accent);
   border-radius: 5px;
   font-family: var(--font-family-sans);
   font-size: var(--font-size-body);
@@ -470,16 +470,16 @@ textarea:focus {
 
 /* Form validation styles */
 input:invalid {
-  border-color: #e74c3c;
+  border-color: var(--danger);
 }
 
 input:valid {
-  border-color: #27ae60;
+  border-color: var(--success);
 }
 
 button {
-  background-color: #3e5c76;
-  color: white;
+  background-color: var(--primary);
+  color: var(--white);
   border: none;
   padding: clamp(0.625rem, 0.5rem + 0.5vw, 0.875rem) clamp(1.5rem, 1.25rem + 1vw, 2.25rem);
   border-radius: 5px;
@@ -510,8 +510,8 @@ footer {
   text-align: center;
   margin-top: clamp(2.5rem, 2rem + 2vw, 4rem);
   padding-top: clamp(1.5rem, 1.25rem + 1vw, 2.5rem);
-  border-top: 1px solid #88b799;
-  color: #666;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
   font-size: var(--font-size-small);
   font-style: italic;
   line-height: var(--line-height-normal);
