@@ -699,6 +699,40 @@ footer {
    PRINT STYLES
    ============================================ */
 
+/* Dark theme variables (toggle with data-theme="dark" on <html> or via prefers-color-scheme) */
+:root[data-theme="dark"] {
+  /* Primary palette */
+  --primary: hsl(145, 28%, 55%);        /* Soft Pine (for buttons, accents) */
+  --primary-dark: hsl(145, 36%, 35%);   /* Forest Core (for hover/focus) */
+  --accent: hsl(134, 25%, 65%);         /* Soft Fern highlight */
+  --accent-strong: hsl(142, 28%, 55%);  /* Cedar Leaf */
+  --focus: hsl(198, 44%, 55%);          /* Lake Blue focus ring */
+
+  /* Text colors */
+  --text: hsl(45, 40%, 92%);            /* Birch White text */
+  --text-muted: hsl(45, 25%, 70%);      /* Soft linen-gray for secondary text */
+
+  /*  Backgrounds */
+  --background: hsl(150, 15%, 10%);     /* Deep Forest (main background) */
+  --surface: hsl(145, 12%, 16%);        /* Moss Shadow (cards, panels) */
+  --accent-bg: hsl(134, 20%, 22%);      /* Subtle fern tint background */
+
+  /* Utility */
+  --border: var(--accent);
+  --shadow-color: hsla(0, 0%, 0%, 0.3);
+  --shadow-soft: hsla(0, 0%, 0%, 0.15);
+
+  /*  Status colors */
+  --success: hsl(142, 45%, 55%);        /* Herb Green */
+  --danger: hsl(13, 55%, 55%);          /* Clay Red */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
 @media print {
   body {
     font-size: 12pt;
