@@ -136,9 +136,9 @@ body {
   font-family: var(--font-family-sans);
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
-  color: #333333;
+  color: var(--text);
   font-weight: var(--font-weight-normal);
-  background-color: #f5f1ea;
+  background-color: var(--background);
   max-width: 800px;
   margin: 0 auto;
   padding: clamp(1rem, 0.75rem + 1vw, 2.5rem);
@@ -152,7 +152,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-family-serif);
-  color: #3e5c76;
+  color: var(--primary);
   line-height: var(--line-height-tight);
   margin-bottom: clamp(1rem, 0.75rem + 1vw, 1.5rem);
 }
