@@ -55,38 +55,35 @@
    ============================================ */
 
 :root {
-  /* Primary palette (semantic HSL variables) */
-  --primary: hsl(208 31% 18%);   
-  --primary-dark: hsl(208 30% 12%);
+  /* Primary palette */
+  --primary: hsl(145, 36%, 17%);        /* Deep Pine */
+  --primary-dark: hsl(145, 39%, 10%);   /* Moss Night */
+  --accent: hsl(134, 21%, 51%);         /* Soft Fern */
+  --accent-strong: hsl(142, 28%, 34%);  /* Cedar Leaf */
+  --focus: hsl(198, 44%, 32%);          /* Lake Blue */
 
-  /* Accent & UI */
-  --accent: hsl(142 25% 63%);      
-  --accent-strong: hsl(142 30% 45%);
-
-   /* Text colors */
-  --text: hsl(210 8% 16%);  /* main text */
-  --text-muted: hsl(210 6% 46%);  /* captions / muted */
+  /* Text colors */
+  --text: hsl(150, 9%, 15%);            /* Forest Charcoal */
+  --text-muted: hsl(150, 5%, 38%);      /* Stone Gray */
+  --label: hsl(150, 8%, 28%);           /* Label / form labels */
 
   /* Backgrounds */
-  --background: hsl(35 28% 96%);  /* warm cream */
-  --surface: hsl(35 24% 99%);
+  --background: hsl(46, 27%, 94%);      /* Warm Mist */
+  --surface: hsl(45, 30%, 97%);         /* Birch White */
+  --accent-bg: hsl(134, 21%, 90%);      /* Light Fern Tint */
 
-  /* Feedback / state */
-  --success: hsl(168 63% 42%);
-  --danger: hsl(6 78% 57%);
-
-  /* Utilities */
+  /* Utility */
   --white: hsl(0 0% 100%);
+  --black: hsl(0 0% 0%);
   --muted-gray: hsl(0 0% 40%);
   --border: var(--accent);
-  /* Additional semantic helpers */
-  --accent-bg: hsl(142 25% 63% / 0.12);
-  --focus: hsl(205 24% 34%);
-  --label: hsl(205 28% 37%);
   --border-muted: hsl(210 8% 88%);
-  --shadow-color: hsl(210 8% 8% / 0.12);
-  --shadow-soft: hsl(210 8% 8% / 0.06);
-  --black: hsl(0 0% 0%);
+  --shadow-color: hsla(145, 39%, 10%, 0.12);
+  --shadow-soft: hsla(145, 39%, 10%, 0.06);
+
+  /* Status colors */
+  --success: hsl(142, 37%, 40%);        /* Herb Green */
+  --danger: hsl(13, 45%, 48%);          /* Clay Red */
 
   /* Font sizes using clamp() for fluid scaling */
   --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
