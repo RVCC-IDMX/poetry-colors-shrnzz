@@ -229,8 +229,8 @@ figcaption {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: #3e5c76;
-  color: white;
+  background: var(--primary);
+  color: var(--white);
   padding: clamp(0.5rem, 0.4rem + 0.25vw, 0.625rem);
   text-decoration: none;
   border-radius: 0 0 4px 4px;
