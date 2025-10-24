@@ -71,6 +71,15 @@
   --background: hsl(35 28% 96%);  /* warm cream */
   --surface: hsl(35 24% 99%);
 
+  /* Feedback / state */
+  --success: hsl(168 63% 42%);
+  --danger: hsl(6 78% 57%);
+
+  /* Utilities */
+  --white: hsl(0 0% 100%);
+  --muted-gray: hsl(0 0% 40%);
+  --border: var(--accent);
+
   /* Font sizes using clamp() for fluid scaling */
   --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
   --font-size-body: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
