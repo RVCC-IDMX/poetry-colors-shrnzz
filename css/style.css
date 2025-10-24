@@ -63,6 +63,13 @@
   --accent: hsl(142 25% 63%);      
   --accent-strong: hsl(142 30% 45%);
 
+   /* Text colors */
+  --text: hsl(210 8% 16%);  /* main text */
+  --text-muted: hsl(210 6% 46%);  /* captions / muted */
+
+  /* Backgrounds */
+  --background: hsl(35 28% 96%);  /* warm cream */
+  --surface: hsl(35 24% 99%);
 
   /* Font sizes using clamp() for fluid scaling */
   --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
