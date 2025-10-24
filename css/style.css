@@ -55,6 +55,15 @@
    ============================================ */
 
 :root {
+  /* Primary palette (semantic HSL variables) */
+  --primary: hsl(208 31% 18%);   
+  --primary-dark: hsl(208 30% 12%);
+
+  /* Accent & UI */
+  --accent: hsl(142 25% 63%);      
+  --accent-strong: hsl(142 30% 45%);
+
+
   /* Font sizes using clamp() for fluid scaling */
   --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
   --font-size-body: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
