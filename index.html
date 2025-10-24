@@ -47,6 +47,10 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <!-- Theme toggle button: toggles data-theme="dark" on <html> -->
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">🌙</button>
+      </div>
     </header>
 
     <main id="main-content" tabindex="-1">
@@ -265,5 +269,44 @@
         literature and nature.
       </p>
     </footer>
+    <!-- Theme toggle script: persists choice in localStorage and updates aria state -->
+    <script>
+      (function () {
+        const storageKey = 'site-theme';
+        const root = document.documentElement;
+        const btn = document.getElementById('theme-toggle');
+
+        if (!btn) return;
+
+        function applyTheme(theme) {
+          if (theme === 'dark') {
+            root.setAttribute('data-theme', 'dark');
+            btn.setAttribute('aria-pressed', 'true');
+            btn.dataset.state = 'dark';
+            btn.textContent = '☀️';
+          } else {
+            root.removeAttribute('data-theme');
+            btn.setAttribute('aria-pressed', 'false');
+            btn.dataset.state = 'light';
+            btn.textContent = '🌙';
+          }
+        }
+
+        // Initialize from localStorage or prefers-color-scheme
+        const stored = localStorage.getItem(storageKey);
+        if (stored === 'dark' || (!stored && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          applyTheme('dark');
+        } else {
+          applyTheme('light');
+        }
+
+        btn.addEventListener('click', function () {
+          const isDark = root.getAttribute('data-theme') === 'dark';
+          const next = isDark ? 'light' : 'dark';
+          applyTheme(next);
+          localStorage.setItem(storageKey, next);
+        });
+      })();
+    </script>
   </body>
 </html>

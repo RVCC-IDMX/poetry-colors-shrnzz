@@ -381,6 +381,45 @@ nav a:focus {
   font-weight: 600;
 }
 
+/* Header control area (theme toggle, etc.) */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border-muted);
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background-color: var(--accent-bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+/* Visually indicate active (dark) state */
+.theme-toggle[data-state="dark"] {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary-dark);
+}
+
 /* ============================================
    POEM SECTIONS
    ============================================ */
