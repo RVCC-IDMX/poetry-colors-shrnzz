@@ -1,0 +1,357 @@
+/* ============================================
+   TYPOGRAPHY SYSTEM - POETRY PROJECT
+   Self-hosted fonts with fluid sizing
+   ============================================ */
+
+/* ============================================
+   FONT FACE DECLARATIONS
+   ============================================ */
+
+/* Merriweather - Serif font for headings and poetry */
+/* Regular weight for poem text */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold weight for emphasis and strong headings */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Open Sans - Sans-serif font for body text */
+/* Regular weight for general body text */
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Semi-bold weight for labels and emphasis */
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter Variable - Variable font for navigation and UI elements */
+/* Supports weight range from 100 to 900 */
+@font-face {
+  font-family: 'Inter Variable';
+  src: url('../fonts/inter-variable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================
+   CSS CUSTOM PROPERTIES - FLUID TYPOGRAPHY
+   Systematic sizing relationships using clamp()
+   
+   Formula: clamp(MIN, PREFERRED, MAX)
+   - MIN: Minimum size (mobile)
+   - PREFERRED: Fluid calculation based on viewport
+   - MAX: Maximum size (desktop)
+   ============================================ */
+
+:root {
+  /* Base font size - NEVER goes below 16px equivalent */
+  --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  
+  /* Body text sizes */
+  --font-size-body: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --font-size-small: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
+  
+  /* Heading sizes - maintaining hierarchical relationships */
+  --font-size-h1: clamp(2rem, 1.5rem + 2vw, 3rem);
+  --font-size-h2: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);
+  --font-size-h3: clamp(1.25rem, 1.1rem + 0.75vw, 1.75rem);
+  
+  /* Poem text - slightly larger for emphasis */
+  --font-size-poem: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  
+  /* Special elements */
+  --font-size-poet-name: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --font-size-nav: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --font-size-button: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  
+  /* Line heights - relative to font size */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-loose: 1.8;
+  
+  /* Letter spacing for variable font */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+  
+  /* Font families */
+  --font-family-serif: 'Merriweather', Georgia, 'Times New Roman', serif;
+  --font-family-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-variable: 'Inter Variable', var(--font-family-sans);
+  
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/* ============================================
+   BASE TYPOGRAPHY STYLES
+   ============================================ */
+
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: #333333;
+  font-weight: var(--font-weight-normal);
+}
+
+/* ============================================
+   HEADINGS - Using Merriweather serif
+   Maintains meaning: Traditional, literary, timeless
+   ============================================ */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-serif);
+  color: #3e5c76;
+  line-height: var(--line-height-tight);
+  margin-bottom: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  margin-top: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  margin-top: clamp(1.5rem, 1.25rem + 1vw, 2.5rem);
+}
+
+/* ============================================
+   NAVIGATION - Using Inter Variable font
+   Weight variations for interactive states
+   ============================================ */
+
+nav {
+  font-family: var(--font-family-variable);
+}
+
+nav a {
+  font-size: var(--font-size-nav);
+  font-weight: 500; /* Variable font weight */
+  letter-spacing: var(--letter-spacing-normal);
+  transition: font-weight 0.2s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  font-weight: 600; /* Subtle weight increase on hover */
+}
+
+/* ============================================
+   POEM TEXT - Enhanced readability
+   ============================================ */
+
+.poet-name {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-poet-name);
+  font-style: italic;
+  font-weight: var(--font-weight-normal);
+  color: #a6785a;
+  text-align: center;
+  line-height: var(--line-height-normal);
+  margin-bottom: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+.stanza p {
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-poem);
+  line-height: var(--line-height-loose);
+  margin-bottom: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ============================================
+   BODY TEXT - Using Open Sans
+   Clean, modern, highly readable
+   ============================================ */
+
+p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-normal);
+  margin-bottom: clamp(1rem, 0.875rem + 0.5vw, 1.25rem);
+}
+
+/* Small text elements */
+small {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+}
+
+/* ============================================
+   FORM ELEMENTS - Using Open Sans
+   ============================================ */
+
+label {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  display: block;
+  margin-bottom: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+  color: #3e5c76;
+}
+
+input,
+textarea {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-normal);
+}
+
+/* ============================================
+   BUTTONS - Using Inter Variable font
+   Crisp, modern UI feel
+   ============================================ */
+
+button {
+  font-family: var(--font-family-variable);
+  font-size: var(--font-size-button);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-wide);
+  transition: font-weight 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  font-weight: 700;
+}
+
+/* ============================================
+   AUDIO SECTION HEADING
+   ============================================ */
+
+.audio-section h2 {
+  font-size: var(--font-size-h2);
+}
+
+/* ============================================
+   SKIP LINK - Using Inter Variable
+   ============================================ */
+
+.skip-link {
+  font-family: var(--font-family-variable);
+  font-size: var(--font-size-nav);
+  font-weight: 600;
+}
+
+/* ============================================
+   FOOTER - Subtle, smaller text
+   ============================================ */
+
+footer {
+  font-size: var(--font-size-small);
+  font-style: italic;
+  line-height: var(--line-height-normal);
+}
+
+/* ============================================
+   ACCESSIBILITY - Screen reader only text
+   ============================================ */
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ============================================
+   FIGCAPTION
+   ============================================ */
+
+figcaption {
+  font-size: var(--font-size-small);
+  font-style: italic;
+  line-height: var(--line-height-normal);
+  color: #666;
+}
+
+/* ============================================
+   ADDRESS ELEMENT
+   ============================================ */
+
+address {
+  font-style: normal;
+  font-size: var(--font-size-body);
+}
+
+/* ============================================
+   CITE ELEMENT
+   ============================================ */
+
+cite {
+  font-style: italic;
+  font-weight: var(--font-weight-normal);
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   Fine-tuning for optimal reading experience
+   ============================================ */
+
+@media (max-width: 768px) {
+  :root {
+    /* Slightly adjusted line heights for mobile */
+    --line-height-normal: 1.65;
+    --line-height-loose: 1.85;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+  }
+  
+  h1 {
+    font-size: 24pt;
+  }
+  
+  h2 {
+    font-size: 18pt;
+  }
+  
+  h3 {
+    font-size: 14pt;
+  }
+}
