@@ -192,6 +192,39 @@ select:focus-visible {
   }
 }
 
+/* High contrast preference: increase contrast for users who request it */
+@media (prefers-contrast: more) {
+  :root {
+    /* Darken text and primary for stronger contrast */
+    --text: hsl(210 10% 10%);
+    --primary: hsl(208 36% 10%);
+    --primary-dark: hsl(208 40% 8%);
+
+    /* Make background slightly lighter to emphasize text */
+    --background: hsl(35 22% 98%);
+    --surface: hsl(35 20% 100%);
+
+    /* Stronger accents and borders */
+    --accent: hsl(142 45% 52%);
+    --accent-strong: hsl(142 48% 34%);
+    --accent-bg: hsl(142 45% 52% / 0.14);
+    --border: var(--accent-strong);
+    --border-muted: hsl(210 10% 80%);
+
+    /* Focus ring darker */
+    --focus: hsl(205 30% 28%);
+
+    /* Shadows more visible on lighter surfaces */
+    --shadow-color: hsl(210 8% 6% / 0.18);
+    --shadow-soft: hsl(210 8% 6% / 0.1);
+  }
+
+  /* Ensure outlines stand out */
+  :focus-visible {
+    outline-color: var(--focus);
+  }
+}
+
 /* ============================================
    BODY STYLING
    ============================================ */
